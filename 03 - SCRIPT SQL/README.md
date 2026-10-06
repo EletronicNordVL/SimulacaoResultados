@@ -7,7 +7,7 @@ Esta pasta contém o script SQL completo para criação, povoamento e consulta d
 * **IDE**: MySQL Workbench (usado para criação, execução e validação dos scripts).
 
 ## 📄 Conteúdo da Pasta
-* ****: Script contendo a estrutura de banco de dados (DDL), inserção de massa de testes (DML) e todas as consultas solicitadas (DQL). ****
+* Script contendo a estrutura de banco de dados (DDL), inserção de massa de testes (DML) e todas as consultas solicitadas (DQL).
 
 ## 🚀 Como Executar o Script no MySQL Workbench
 1. Abra o **MySQL Workbench** e conecte-se ao seu servidor MySQL.
