@@ -6,9 +6,9 @@ O objetivo deste projeto é modelar, estruturar e consultar um banco de dados re
 
 ## 📁 Estrutura do Repositório
 Contém as pastas:
-> 01 - REQUISITOS
-> 02 - MODELAGEM
-> 03 - SCRIPT SQL
+01 - REQUISITOS
+02 - MODELAGEM
+03 - SCRIPT SQL
 
 ## 🚀 Módulos do Projeto
 
