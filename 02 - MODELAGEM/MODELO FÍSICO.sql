@@ -1,0 +1,37 @@
+/* MODELO FÍSICO */
+CREATE TABLE Simulacao (
+    NumSimulacao INT PRIMARY KEY AUTO_INCREMENT,
+    DataSimulacao DATE NOT NULL,
+    QtdCorposInicial INT NOT NULL,
+    NumInteracoes INT NOT NULL,
+    TempoInteracoes INT NOT NULL
+);
+
+CREATE TABLE Resultados (
+    NumResultado INT PRIMARY KEY AUTO_INCREMENT,
+    NumSimulacao INT NOT NULL,
+    NumInteracao INT NOT NULL
+);
+
+CREATE TABLE Corpos (
+    NumCorpo INT PRIMARY KEY AUTO_INCREMENT,
+    NumResultado INT NOT NULL,
+    NomeCorpo VARCHAR(50) NOT NULL,
+    MassaCorpo FLOAT NOT NULL,
+    PosX FLOAT NOT NULL,
+    PosY FLOAT NOT NULL,
+    VelX FLOAT NOT NULL,
+    VelY FLOAT NOT NULL,
+    DensidadeCorpo FLOAT NOT NULL
+);
+
+ALTER TABLE Resultados ADD CONSTRAINT FK_Resultados_1
+    FOREIGN KEY (NumSimulacao)
+    REFERENCES Simulacao (NumSimulacao);
+
+ALTER TABLE Resultados ADD CONSTRAINT UQ_Resultados_Simulacao_Interacao
+    UNIQUE (NumSimulacao, NumInteracao);
+
+ALTER TABLE Corpos ADD CONSTRAINT FK_Corpos_2
+    FOREIGN KEY (NumResultado)
+    REFERENCES Resultados (NumResultado);
